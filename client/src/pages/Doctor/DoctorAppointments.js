@@ -18,7 +18,7 @@ const DoctorAppointments = () => {
       dispatch(showLoading());
 
       const response = await axios.get(
-        `/api/doctors/get-appointments-by-doctor-id`,
+        `/api/doctors/get-doctor-info-by-id`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -54,7 +54,7 @@ const DoctorAppointments = () => {
       dispatch(showLoading());
   
       const response = await axios.post(
-        `http://localhost:3000/api/doctors/change-appointment-status`,
+        `/api/doctors/change-appointment-status`,
         {
           appointmentId: record._id,
           status: action,
