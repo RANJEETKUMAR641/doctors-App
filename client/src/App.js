@@ -27,7 +27,7 @@ function App() {
       setIsAuthenticated(true); // User is authenticated
     }
   }, [token]);
-  axios.defaults.baseURL = "http://localhost:8080/";
+  axios.defaults.baseURL = "https://doctors-app-j5s6.vercel.app/";
 
   return (
     <BrowserRouter>
